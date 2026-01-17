@@ -41,7 +41,7 @@ delete from reviews where user_id in (
 insert into categories (name, description)
 select distinct
     p.name as name,
-    'imported from products' as description
+    'Imported from products' as description
 from products p
 where not exists (
     select 1
